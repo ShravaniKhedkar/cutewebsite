@@ -1,0 +1,157 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Body Styling - Background & Centering */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(45deg, #f8d7e2, #ffd1f2); /* Cute gradient pink background */
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  text-align: center;
+}
+
+/* Main Container */
+.container {
+  background-color: #ffffff; /* White background for contrast */
+  border-radius: 30px; /* Very rounded corners */
+  padding: 40px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  animation: fadeIn 1.5s ease-in-out; /* Fade-in effect for container */
+}
+
+/* Animation for fading in */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Header - Playful, cute text */
+h1 {
+  font-size: 2.5em;
+  color: #ff66b2;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
+}
+
+/* Cute Heart Icon - For the question */
+h1::before {
+  content: '💖';
+  margin-right: 10px;
+  font-size: 2em;
+}
+
+/* Image Styling - Centered and cute */
+.image {
+  width: 80%;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: transform 0.3s ease-in-out; /* Zoom effect on hover */
+}
+
+/* Hover effect for image */
+.image:hover {
+  transform: scale(1.05);
+}
+
+/* Button Container (Yes/No buttons) */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+/* Shared Button Styles */
+button {
+  padding: 15px 30px;
+  font-size: 1.4em;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px; /* Round buttons */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition */
+  outline: none;
+}
+
+/* Yes Button - Cute Pink */
+.yes-btn {
+  background-color: #ff66b2;
+  color: white;
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.3);
+  position: relative;
+}
+
+.yes-btn::after {
+  content: ''; /* Happy emoji */
+  font-size: 1.5em;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.yes-btn:hover {
+  background-color: #ff3385;
+  box-shadow: 0 6px 16px rgba(255, 105, 180, 0.5);
+  transform: scale(1.1); /* Slightly grow the button */
+}
+
+/* No Button - Light Pink */
+.no-btn {
+  background-color: #ff99cc;
+  color: white;
+  box-shadow: 0 4px 12px rgba(255, 182, 193, 0.3);
+  position: relative;
+}
+
+.no-btn::after {
+  content: ''; /* Sad emoji */
+  font-size: 1.5em;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.no-btn:hover {
+  background-color: #ff66b2;
+  box-shadow: 0 6px 16px rgba(255, 182, 193, 0.5);
+  transform: scale(1.1); /* Slightly grow the button */
+}
+
+/* Optional: Add a subtle bouncing effect to the buttons */
+.yes-btn, .no-btn {
+  animation: bounce 1s infinite alternate; /* Bounce animation */
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Lift up */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
